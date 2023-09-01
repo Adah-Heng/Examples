@@ -1,4 +1,4 @@
-# Java-projects
+# Examples
 1. Section one invoice app
 . does invoice totals
 
@@ -28,3 +28,6 @@ subtraction, square root, power, a back button, and a decimal. The buttons are a
 the input number and the calucalted number in a box. The memory is deplayed on the bottom of the display. The code uses text to display the <br> 
 memory. The event handler is where the input from the buttons and displays the number some of the inputs call compute. Compute is where all <br>
 of computations are made. Start is where all of the display happends.
+
+6. HTML final project is a project where we made multipule web pages in HTML for mine I made a recipe cite.
+   

@@ -1,0 +1,126 @@
+/*Adah Heng*/
+/*Aprons CSS*/
+
+
+#wrapper {
+	width: 80%;
+	margin: auto;
+}
+
+#container {
+	display: flex;
+	float: right;
+}
+
+body { background-color: black;}
+	
+nav	{
+	font-family: Cambria, Calibri, "Times New Roman";
+	font-size: 145%;
+}
+
+nav a {
+	text-decoration: none;
+	color: #7a6a50;
+	}
+	
+nav li {
+	padding: 20px;
+}
+
+
+#para {
+	color: #818763;
+	text-align: center;
+	font-size: 160%;
+}
+
+#mac {
+	color: #818763;
+	text-align: center;
+	font-size: 160%;
+	font-family: "Britannic Bold", Calibri, "Times New Roman";
+}
+
+#beef {
+	font-family: "Javanese Text", Calibri, "Times New Roman";
+	color: #818763;
+	text-align: center;
+	font-size: 160%;
+}
+
+#rec ul li {
+	color: #939384;
+	list-style-type: none;
+	font-size: 130%;
+	padding: 10px;
+}
+
+#in ol li {
+	color: #b09c94;
+	font-size: 130%;
+	padding: 5px;
+}
+
+header {
+	font-family: Algerian, Cambria, Calibri;
+	text-align: center;
+	font-size: 400%;
+	color: #7D9196;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+
+h3 {
+	color: #818763;
+	font-size: 135%;
+}
+
+#note {
+	font-size: 120%;
+	color: #818763;
+}
+
+#chicken {
+	color: #818763;
+	font-family: 'Goudy Old Style', Cambria, Calibri;
+	text-align: center;
+	font-size: 160%;
+}
+
+.con {
+	position: relative;
+}
+
+.image {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border: 1px solid red;
+}
+
+#mex{
+	color: #818763;
+	font-family: Castellar, Cambria, Calibri;
+	text-align: center;
+	font-size: 160%;
+}
+
+a {
+  color:  #939384;
+  background-color: transparent;
+  text-decoration: none;
+}

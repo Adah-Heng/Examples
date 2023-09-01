@@ -1,204 +1,119 @@
 /**
- * https://github.com/Adah-Heng/Java-projects/tree/main/Section3_BB_ScoreBoard
- * A Player on a basketBall Team plus the player's stats.
- * @author adheng01
+ * Class used to create objects for Player
+ * @author Adahm and Tim
  *
  */
 public class Player {
-	/**
-	 * The name of the player.
-	 */
-	private String name;
+	
+	private static int lastNumber = 0;
+	private int playerId;
+	private String playerName;
+	private int wins;
+	private int lowestAttempts;
+	private int highestAttempts;
 	
 	/**
-	 * The number on the jersey.
+	 * Initializes the fields of the class
 	 */
-	private int jersey;
-	
-	/**
-	 * The number of fouls the player has.
-	 */
-	private int foul;
-	
-	/**
-	 * How many free throws the player made.
-	 */
-	private int freeThrow;// is one point field goal
-	
-	/**
-	 * How many two pointers the player made.
-	 */
-	private int twoPointer;// is 2 point field goal
-	
-	/**
-	 * How many three pointers the player made.
-	 */
-	private int threePointer;// is 3 point field goal
+	public Player() {
 
-	/**
-	 * Where the player gets the methods defined and the name set to unknown.
-	 */
-	public Player()	{
-		this.name = "unknown";
-		this.jersey = 0;
-		this.foul = 0;
-		this.freeThrow = 0;
-		this.twoPointer = 0;
-		this.threePointer = 0;
-
-	}
+		this.playerId = ++Player.lastNumber;
+		this.playerName = "Unoknwn";
+		this.wins = 0;
+		this.lowestAttempts = 0;
+		this.highestAttempts = 0;
+	} 
 	
 	/**
-	 * The overload constructor for Player that makes sure jersey is in range.
-	 * @param The player's jersey number.
-	 * @throws Exception to find if the player's jersey number is out of range.
+	 * The overload constructor used to call an already existing player instance
+	 * @param playerName
 	 */
-	public Player(int jersey) throws Exception	{
-		this();
-		this.setJersey(jersey);
-	}
-	
-	/**
-	 * Allows creating a player only if setting the jersey number.<br>
-	 * This is necessary when trying to find a Player in the Team's ArrayList.<br>
-	 * The constructor calls this.setJersey method for data validation.
-	 * @param The player's name.
-	 * @param The player's jersey number.
-	 * @throws Exception to find if the player's jersey number is out of range.
-	 */
-	public Player(String name, int jersey) throws Exception	{
-		this();
-		this.setName(name);
-		this.setJersey(jersey);
-	}
-	
-	/**
-	 * Gets player's name.
-	 * @return The player's name.
-	 */
-	public String getName()	{
-		return this.name;
-	}
-	
-	/**
-	 * Gets the player's jersey number.
-	 * @return The player's jersey number.
-	 */
-	public int getJersey()	{
-		return this.jersey;
-	}
-	
-	/**
-	 * Sets the player's name.
-	 * @param The player's name.
-	 */
-	public void setName(String name)	{
-		this.name = name;
-	}
-	
-	/**
-	 * Gets the player's fouls and adds one if they have one.
-	 * @return Player's fouls.
-	 */
-	public int getFoul(){
-		return this.foul;
-	}
-	
-	/**
-	 * Sets the jersey number for player if it is between 1-99.
-	 * @param Player's jersey number.
-	 * @throws Exception to find if the player's jersey number is out of range.
-	 */
-	public void setJersey(int jersey) throws Exception	{
-		if (jersey >= 0 && jersey <= 99)
-			this.jersey = jersey;
-		else
-			throw new Exception("Invaild jersey number. Must be between 0-99");
-	}
-	
-	/**
-	 * Gets the number of free throws the player made.
-	 * @return Player's free throws.
-	 */
-	public int getFreeThrow()	{
-		return this.freeThrow;
-	}
-	
-	/**
-	 *  Gets the number of two pointers the player made.
-	 * @return Player's two pointers.
-	 */
-	public int getTwoPointer()	{
-		return this.twoPointer;
+	public Player(String playerName) {
+		this(); 
+		
+		this.playerName = playerName;
+		
 	}
 
 	/**
-	 *  Gets the number of three pointers the player made by a player.
-	 * @return Player's three pointers.
+	 * returns player name
+	 * @return
 	 */
-	public int getThreePointer()	{
-		return this.threePointer;
+	public String getPlayerName() {
+		return playerName;
 	}
-	
+
 	/**
-	 * Increments appropriate field goal type using a switch that has error handling to catch<br>
-	 * the wrong shot type number.
-	 * @param The player's shotType.
-	 * @throws Exception to find if the shot type is not valid.
+	 * allows user to put in their name
+	 * @param playerName
 	 */
-	public void shot(int shotType) throws Exception	{
-		switch (shotType)	{
-		case 1: 
-			this.freeThrow++;
-			break;
-		case 2: 
-			this.twoPointer++;
-			break;
-		case 3: 
-			this.threePointer++;
-			break;
-		default: 
-			throw new Exception("Invaild shot type:" + shotType);
+	public void setPlayerName(String playerName){
+		
+		if (playerName == "")	{
+			System.out.println("Player name cannot be empty.");
 		}
-	}
-	
-	/**
-	 * Runs the equation to find the total points the player made.
-	 * @return The equation is returned as this.getPoints.
-	 */
-	public int getPoints()	{
-		return (this.threePointer * 3) + (this.twoPointer * 2) + this.freeThrow;
-
-	}
-	
-	/**
-	 * Displays the player's jersey number, fouls, name, and the calculated getPoint equation.
-	 */
-	public void displayStats()	{
-		System.out.println("Jersey number: " + this.jersey + " name: " 
-				+ this.name + " Fouls =" + this.foul + " Points =" + this.getPoints());
-	}
-
-
-	/**
-	 * Instead of verifying two players are identical by equal identities.<br>
-	 * This method will verify two players are the same ONLY their jersey number.<br>
-	 * This allows the ArrayList.getIndex() method to return a player's by only by checking<br>
-	 * their jersey number.
-	 * @param Object A player object to check equality of ONLY the jersey number.
-	 * @param  True if the two player's jersey number are equal.
-	 */
-	public boolean equals(Object object)	{
-		if(!(object instanceof Player))
-			return false;
-
-		Player other = (Player)object;
-
-		if(this.jersey== other.getJersey())
-			return true;
 		else
-			return false;
+			this.playerName = playerName;
 	}
+
+	/**
+	 * returns the wins of the player
+	 * @return
+	 */
+	public int getWins() {
+		return wins;
+	}
+
+	/**
+	 * adds wins the player
+	 */
+	public void addWin() {
+		this.wins++;
+	}
+	
+	/**
+	 * returns the lowest attempts of the player
+	 * @return
+	 */
+	public int getLowestAttempts() {
+		return lowestAttempts;
+	}
+
+	/**
+	 * sets the lowest and / or highest number of attempts the player has if needed 
+	 * @param attempts
+	 */
+	public void setAttempts(int attempts) {
+		//if the player has more attempts than previously recorded, 
+		//replace the score with that
+		if (attempts > this.highestAttempts) 
+			this.highestAttempts = attempts;
+		
+		//if the player has less attempts than previously recorded, 
+		//replace the score with that
+		if (attempts < this.lowestAttempts)
+			this.lowestAttempts = attempts;
+		
+		//you can't have a score of 0 attempts, so it defaults to the most 
+		//recent score
+		else if (this.lowestAttempts == 0)
+			this.lowestAttempts = attempts;
+	}
+	
+	/**
+	 * returns the highest attempts
+	 * @return
+	 */
+	public int getHighestAttempts() {
+		return highestAttempts;
+	}
+
+	/**
+	 * returns the player ID
+	 * @return
+	 */
+	public int getPlayerId() {
+		return this.playerId;
+	} 
+	
 }
-
-

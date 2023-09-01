@@ -1,0 +1,233 @@
+GBU:
+
+The good was setting up the setters and getters. The bad was trying to figuere out why Scoreboad was throwing an error. 
+The ugly was trying to figure out how to code some of it until I found out how to access the java doc page.
+
+consol output:
+
+when no input when displaying game
+=========================================
+Welcome to the BB Scoreboard App
+=========================================
+
+Enter the HOME Team name: num
+
+Enter num player's name or 'q' to quit: sarah
+Enter sarah jersey number: 12
+
+Enter num player's name or 'q' to quit: bear
+Enter bear jersey number: 16
+
+Enter num player's name or 'q' to quit: q
+
+-----------------------------------------
+
+Enter the AWAY TEAM name: crazy
+
+Enter crazy player's name or 'q' to quit: z
+Enter z jersey number: 54
+
+Enter crazy player's name or 'q' to quit: i
+Enter i jersey number: 34
+
+Enter crazy player's name or 'q' to quit: q
+
+=========================================
+Game Started!
+=========================================
+
+-----------------------------------------
+Main Menu
+-----------------------------------------
+0 = End Game
+1 = Enter num Team's Stats
+2 = Enter crazy Team's Stats
+3 = Display Game Stats
+-----------------------------------------
+Menu Choice: 1
+-----------------------------------------
+
+Enter num's Jersey # 12
+
+-----------------------------------------
+Enter #12 sarah Stats
+-----------------------------------------
+0 = foul
+1 = free throw
+2 = 2pt field goal
+3 = 3pt field goal
+-----------------------------------------
+Enter Stat Type: 0
+-----------------------------------------
+Jersey number: 12 name: sarah Fouls =0Points =0
+
+-----------------------------------------
+
+numhas scored 0and has 0fouls.crazyhas scored 0and has 0fouls.
+-----------------------------------------
+Main Menu
+-----------------------------------------
+0 = End Game
+1 = Enter num Team's Stats
+2 = Enter crazy Team's Stats
+3 = Display Game Stats
+-----------------------------------------
+Menu Choice: 2
+-----------------------------------------
+
+Enter crazy's Jersey # 34
+
+-----------------------------------------
+Enter #34 i Stats
+-----------------------------------------
+0 = foul
+1 = free throw
+2 = 2pt field goal
+3 = 3pt field goal
+-----------------------------------------
+Enter Stat Type: 2
+-----------------------------------------
+Jersey number: 34 name: i Fouls =0Points =2
+
+-----------------------------------------
+
+numhas scored 0and has 0fouls.crazyhas scored 2and has 0fouls.
+-----------------------------------------
+Main Menu
+-----------------------------------------
+0 = End Game
+1 = Enter num Team's Stats
+2 = Enter crazy Team's Stats
+3 = Display Game Stats
+-----------------------------------------
+Menu Choice: 3
+-----------------------------------------
+
+Jersey Name     Fouls 1pt2pt3pt Total
+====== ============== ===== == == == ===========
+Conversion = '1'
+Sorry but this program ended with an error. Please contact Adah Heng!
+
+
+wrong jersey type
+=========================================
+Welcome to the BB Scoreboard App
+=========================================
+
+Enter the HOME Team name: y
+
+Enter y player's name or 'q' to quit: k
+Enter k jersey number: 100
+Invalid input! Please enter a number between (0 - 99): 
+
+correct:
+
+=========================================
+Welcome to the BB Scoreboard App
+=========================================
+
+Enter the HOME Team name: try
+
+Enter try player's name or 'q' to quit: sarah
+Enter sarah jersey number: 3
+
+Enter try player's name or 'q' to quit: q
+
+-----------------------------------------
+
+Enter the AWAY TEAM name: force
+
+Enter force player's name or 'q' to quit: red
+Enter red jersey number: 4
+
+Enter force player's name or 'q' to quit: q
+
+=========================================
+Game Started!
+=========================================
+
+-----------------------------------------
+Main Menu
+-----------------------------------------
+0 = End Game
+1 = Enter try Team's Stats
+2 = Enter force Team's Stats
+3 = Display Game Stats
+-----------------------------------------
+Menu Choice: 1
+-----------------------------------------
+
+Enter try's Jersey # 3
+
+-----------------------------------------
+Enter #3 sarah Stats
+-----------------------------------------
+0 = foul
+1 = free throw
+2 = 2pt field goal
+3 = 3pt field goal
+-----------------------------------------
+Enter Stat Type: 2
+-----------------------------------------
+Jersey number: 3 name: sarah Fouls =0 Points =2
+
+-----------------------------------------
+
+try has scored 2 and has 0 fouls.force has scored 0 and has 0 fouls.
+-----------------------------------------
+Main Menu
+-----------------------------------------
+0 = End Game
+1 = Enter try Team's Stats
+2 = Enter force Team's Stats
+3 = Display Game Stats
+-----------------------------------------
+Menu Choice: 2
+-----------------------------------------
+
+Enter force's Jersey # 4
+
+-----------------------------------------
+Enter #4 red Stats
+-----------------------------------------
+0 = foul
+1 = free throw
+2 = 2pt field goal
+3 = 3pt field goal
+-----------------------------------------
+Enter Stat Type: 2
+-----------------------------------------
+Jersey number: 4 name: red Fouls =0 Points =2
+
+-----------------------------------------
+
+try has scored 2 and has 0 fouls.force has scored 2 and has 0 fouls.
+-----------------------------------------
+Main Menu
+-----------------------------------------
+0 = End Game
+1 = Enter try Team's Stats
+2 = Enter force Team's Stats
+3 = Display Game Stats
+-----------------------------------------
+Menu Choice: 3
+-----------------------------------------
+
+Jersey Name           Fouls 1pt2pt3pt Total
+====== ============== ===== == == == ===========
+ 3    sarah             0    0  1  0          2 
+Jersey Name           Fouls 1pt2pt3pt Total
+====== ============== ===== == == == ===========
+ 4      red             0    0  1  0          2 
+-----------------------------------------
+Main Menu
+-----------------------------------------
+0 = End Game
+1 = Enter try Team's Stats
+2 = Enter force Team's Stats
+3 = Display Game Stats
+-----------------------------------------
+Menu Choice: 0
+-----------------------------------------
+
+try has scored 2 and has 0 fouls.force has scored 2 and has 0 fouls.
